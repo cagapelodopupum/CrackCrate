@@ -1,0 +1,349 @@
+###################################
+#        CrackCrate Config        #
+###################################
+
+# Configurações gerais
+settings:
+  animation-duration: 3
+  animation-type: SPIN
+  sound-enabled: true
+  particles-enabled: true
+  broadcast-rare: true
+  rare-threshold: 5.0
+
+# Mensagens
+messages:
+  prefix: "&8[&6CrackCrate&8] &r"
+  no-permission: "&cVocê não tem permissão para isso!"
+  crate-opened: "&aVocê abriu uma &e%crate% &ae ganhou &6%reward%&a!"
+  no-key: "&cVocê não tem chave para esta crate!"
+  key-given: "&aChave de &e%crate% &adada para &6%player%&a! (x%amount%)"
+  key-received: "&aVocê recebeu &e%amount%x &6Chave de %crate%&a!"
+  invalid-crate: "&cCrate &e%crate% &cnão encontrada!"
+  reload-done: "&aPlugin recarregado com sucesso!"
+  broadcast-rare: "&6» &e%player% &6abriu uma &e%crate% &6e ganhou &c%reward%&6! (%.1f%%)"
+  location-set: "&aLocalização da crate &e%crate% &adefinida!"
+  not-a-crate: "&cEsta crate não existe ou não está configurada!"
+
+# Crates
+crates:
+  normal:
+    display-name: "&7Caixa Normal"
+    key-name: "&7Chave Normal"
+    key-lore:
+      - "&7Use esta chave em uma"
+      - "&7Caixa Normal para ganhar prêmios!"
+      - ""
+      - "&eCrate: &7Caixa Normal"
+    key-material: TRIPWIRE_HOOK
+    block-material: CHEST
+    hologram-lines:
+      - "&7✦ Caixa Normal ✦"
+      - "&7Clique com a chave para abrir!"
+    rewards:
+      - id: "capacete"
+        display-name: "&7Capacete de Diamante"
+        material: DIAMOND_HELMET
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 2
+          MENDING: 1
+      - id: "peitoral"
+        display-name: "&7Peitoral de Diamante"
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 2
+          MENDING: 1
+      - id: "calca"
+        display-name: "&7Calça de Diamante"
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 2
+          MENDING: 1
+      - id: "bota"
+        display-name: "&7Bota de Diamante"
+        material: DIAMOND_BOOTS
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 2
+          MENDING: 1
+      - id: "espada"
+        display-name: "&7Espada de Diamante"
+        material: DIAMOND_SWORD
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          SHARPNESS: 2
+          MENDING: 1
+      - id: "picareta"
+        display-name: "&7Picareta de Diamante"
+        material: DIAMOND_PICKAXE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          FORTUNE: 1
+          MENDING: 1
+
+  spawners:
+    display-name: "&2Caixa Spawners"
+    key-name: "&2Chave Spawners"
+    key-lore:
+      - "&7Use esta chave em uma"
+      - "&7Caixa Spawners para ganhar spawners!"
+      - ""
+      - "&eCrate: &2Caixa Spawners"
+    key-material: TRIPWIRE_HOOK
+    block-material: SPAWNER
+    hologram-lines:
+      - "&2✦ Caixa Spawners ✦"
+      - "&7Clique com a chave para abrir!"
+    rewards:
+      - id: "spawner_creeper"
+        display-name: "&2Spawner de Creeper"
+        material: SPAWNER
+        amount: 1
+        chance: 25.0
+        commands:
+          - "give %player% minecraft:spawner{BlockEntityTag:{id:\"minecraft:creeper\"},display:{Name:'{\"text\":\"Spawner de Creeper\"}'}} 1"
+        enchants: {}
+      - id: "spawner_esqueleto"
+        display-name: "&fSpawner de Esqueleto"
+        material: SPAWNER
+        amount: 1
+        chance: 25.0
+        commands:
+          - "give %player% minecraft:spawner{BlockEntityTag:{id:\"minecraft:skeleton\"},display:{Name:'{\"text\":\"Spawner de Esqueleto\"}'}} 1"
+        enchants: {}
+      - id: "spawner_bruxa"
+        display-name: "&5Spawner de Bruxa"
+        material: SPAWNER
+        amount: 1
+        chance: 25.0
+        commands:
+          - "give %player% minecraft:spawner{BlockEntityTag:{id:\"minecraft:witch\"},display:{Name:'{\"text\":\"Spawner de Bruxa\"}'}} 1"
+        enchants: {}
+      - id: "spawner_iron_golem"
+        display-name: "&7Spawner de Iron Golem"
+        material: SPAWNER
+        amount: 1
+        chance: 25.0
+        commands:
+          - "give %player% minecraft:spawner{BlockEntityTag:{id:\"minecraft:iron_golem\",SpawnData:{entity:{id:\"minecraft:iron_golem\",Attributes:[{Name:\"minecraft:generic.attack_damage\",Base:0}]}},MaxNearbyEntities:16},display:{Name:'{\"text\":\"Spawner de Iron Golem\"}'}} 1"
+        enchants: {}
+
+  mitica:
+    display-name: "&5Caixa Mítica"
+    key-name: "&5Chave Mítica"
+    key-lore:
+      - "&7Use esta chave em uma"
+      - "&7Caixa Mítica para ganhar itens poderosos!"
+      - ""
+      - "&eCrate: &5Caixa Mítica"
+    key-material: TRIPWIRE_HOOK
+    block-material: CRYING_OBSIDIAN
+    hologram-lines:
+      - "&5✦ Caixa Mítica ✦"
+      - "&7Clique com a chave para abrir!"
+    rewards:
+      - id: "capacete_netherite"
+        display-name: "&5Capacete de Netherite"
+        material: NETHERITE_HELMET
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - id: "peitoral_netherite"
+        display-name: "&5Peitoral de Netherite"
+        material: NETHERITE_CHESTPLATE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - id: "calca_netherite"
+        display-name: "&5Calça de Netherite"
+        material: NETHERITE_LEGGINGS
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - id: "bota_netherite"
+        display-name: "&5Bota de Netherite"
+        material: NETHERITE_BOOTS
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          MENDING: 1
+      - id: "espada_netherite"
+        display-name: "&5Espada de Netherite"
+        material: NETHERITE_SWORD
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          SHARPNESS: 5
+          UNBREAKING: 3
+          MENDING: 1
+          LOOTING: 3
+          FIRE_ASPECT: 2
+          KNOCKBACK: 2
+      - id: "picareta_netherite"
+        display-name: "&5Picareta de Netherite"
+        material: NETHERITE_PICKAXE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          MENDING: 1
+          FORTUNE: 3
+      - id: "escudo"
+        display-name: "&5Escudo"
+        material: SHIELD
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          UNBREAKING: 3
+          MENDING: 1
+      - id: "golden_apple"
+        display-name: "&6Golden Apple"
+        material: GOLDEN_APPLE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants: {}
+
+  mace:
+    display-name: "&4Caixa Mace"
+    key-name: "&4Chave Mace"
+    key-lore:
+      - "&7Use esta chave em uma"
+      - "&7Caixa Mace para ganhar itens épicos!"
+      - ""
+      - "&eCrate: &4Caixa Mace"
+    key-material: TRIPWIRE_HOOK
+    block-material: OBSIDIAN
+    hologram-lines:
+      - "&4✦ Caixa Mace ✦"
+      - "&7Clique com a chave para abrir!"
+    rewards:
+      - id: "capacete_mace"
+        display-name: "&4Capacete de Netherite"
+        material: NETHERITE_HELMET
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          THORNS: 3
+          RESPIRATION: 3
+          AQUA_AFFINITY: 1
+          MENDING: 1
+      - id: "peitoral_mace"
+        display-name: "&4Peitoral de Netherite"
+        material: NETHERITE_CHESTPLATE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          THORNS: 3
+          MENDING: 1
+      - id: "calca_mace"
+        display-name: "&4Calça de Netherite"
+        material: NETHERITE_LEGGINGS
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          THORNS: 3
+          MENDING: 1
+      - id: "bota_mace"
+        display-name: "&4Bota de Netherite"
+        material: NETHERITE_BOOTS
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          PROTECTION: 4
+          UNBREAKING: 3
+          THORNS: 3
+          FEATHER_FALLING: 4
+          DEPTH_STRIDER: 3
+          MENDING: 1
+      - id: "escudo_mace"
+        display-name: "&4Escudo"
+        material: SHIELD
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          UNBREAKING: 3
+          MENDING: 1
+      - id: "espada_mace"
+        display-name: "&4Espada de Netherite"
+        material: NETHERITE_SWORD
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          SHARPNESS: 5
+          SWEEPING_EDGE: 3
+          LOOTING: 3
+          FIRE_ASPECT: 2
+          KNOCKBACK: 2
+          MENDING: 1
+      - id: "picareta_mace"
+        display-name: "&4Picareta de Netherite"
+        material: NETHERITE_PICKAXE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          EFFICIENCY: 5
+          UNBREAKING: 3
+          FORTUNE: 3
+          MENDING: 1
+      - id: "mace"
+        display-name: "&4Mace"
+        material: MACE
+        amount: 1
+        chance: 25.0
+        commands: []
+        enchants:
+          DENSITY: 5
+          BREACH: 4
+          WIND_BURST: 3
+          SMITE: 5
+          FIRE_ASPECT: 2
+          UNBREAKING: 3
+          MENDING: 1

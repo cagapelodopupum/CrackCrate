@@ -1,0 +1,35 @@
+name: CrackCrate
+version: 1.0.0
+main: com.crackcrate.CrackCrate
+api-version: '1.21'
+description: Plugin de Crates com sistema de aleatoriedade e recompensas
+author: CrackCrate
+website: https://github.com/crackcrate
+
+commands:
+  crate:
+    description: Comando principal do CrackCrate
+    usage: /crate <open|give|create|list|reload|setlocation>
+    aliases: [cr]
+  givecrate:
+    description: Da uma chave de crate para um jogador
+    usage: /givecrate <jogador> <crate> [quantidade]
+    permission: crackcrate.admin
+  keyall:
+    description: Da uma chave de crate para todos os jogadores online
+    usage: /keyall <crate> <quantidade>
+    permission: crackcrate.admin
+
+permissions:
+  crackcrate.use:
+    description: Permite abrir crates
+    default: true
+  crackcrate.admin:
+    description: Acesso total ao CrackCrate
+    default: op
+  crackcrate.give:
+    description: Permite dar chaves
+    default: op
+  crackcrate.reload:
+    description: Permite recarregar o plugin
+    default: op
